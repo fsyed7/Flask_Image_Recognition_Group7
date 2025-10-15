@@ -6,3 +6,4 @@ tensorflow==2.10.0
 pytest==8.3.3
 pylint
 werkzeug==2.2.2
+pre-commit
