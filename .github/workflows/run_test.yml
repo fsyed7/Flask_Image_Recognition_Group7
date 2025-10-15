@@ -28,12 +28,9 @@ jobs:
 
     - name: Run pylint
       run: |
-        pylint app.py model.py
+        pylint --rcfile=.pylintrc app.py model.py
 
       continue-on-error: true
     - name: Test with pytest
       run: |  
-        coverage run -m pytest  -v -s  
-    - name: Generate Coverage Report  
-      run: |  
-        coverage report -m
+        pytest
