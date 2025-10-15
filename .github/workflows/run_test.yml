@@ -28,7 +28,7 @@ jobs:
 
     - name: Run pylint
       run: |
-        pylint app.py model.py --output=lint.txt || true
+        pylint app.py model.py
         
       continue-on-error: true
     - name: Test with pytest
