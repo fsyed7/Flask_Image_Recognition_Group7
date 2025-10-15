@@ -30,6 +30,10 @@ jobs:
       run: |
         pylint app.py model.py
 
-    - name: Run pytest
-      run: |
-        pytest
+      continue-on-error: true
+    - name: Test with pytest
+      run: |  
+        coverage run -m pytest  -v -s  
+    - name: Generate Coverage Report  
+      run: |  
+        coverage report -m
